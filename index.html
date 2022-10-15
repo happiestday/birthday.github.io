@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./harrystyle.css">
+    <link rel="stylesheet" href="./cardstyle.css">
+    <title>Anu Birthday</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="cloud cloud-4"></div>
+        <div class="container">
+          <div class="broom"></div>
+          <div class="harry">
+            <div class="cloak"></div>
+            <div class="leg"></div>
+            <div class="face">
+              <div class="hair-1"></div>
+              <div class="hair-2"></div>
+              <div class="hair-3"></div>
+              <div class="glasses"></div>
+              <div class="eye"></div>
+              <div class="scar"></div>
+              <div class="mouth"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <section>
+        <img src="./stars.png" id="stars">
+        <img src="./moon.png" id="moon">
+        <img src="./mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Happy Birthday Anu</h2>
+        <img src="./mountains_front.png" id="mountains_front">
+    </section>
+
+    <div class="sec">
+        <div class="card">
+            <div class="outside">
+              <div class="front">
+                <p>Happy Birthday</p>
+                <div class="cake">
+                  <div class="top-layer"></div>
+                  <div class="middle-layer"></div>
+                  <div class="bottom-layer"></div>
+                  <div class="candle"></div>
+                </div>
+              </div>
+              <div class="back"></div>
+            </div>
+            <div class="inside">
+              <p>Wishing you a very happy birthday filled with love and laughter</p>
+              <h1>&#127873;</h1>
+            </div>
+          </div>
+    </div>
+
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+        let text = document.getElementById('text');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+        })
+    </script>
+</body>
+</html>
